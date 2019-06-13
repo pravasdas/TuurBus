@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="ld_activityScreenTitles">
+        <item>Home</item>
+        <item>Login/Register</item>
+        <item>Package Tours</item>
+        <item>Vehicle Rentals</item>
+        <item>Crazy Tours</item>
+        <item>Blogs</item>
+        <item>Contact Us</item>
+        <item>About Us</item>
+        <item>My Profile</item>
+        <item>My Wishlist</item>
+        <item>My Bookings</item>
+        <item>Logout</item>
+    </string-array>
+
+    <array name="ld_activityScreenIcons">
+        <item>@drawable/home</item>
+        <item>@drawable/login_register</item>
+        <item>@drawable/package_tours_30x30</item>
+        <item>@drawable/vehicle_rentals</item>
+        <item>@drawable/crazy_hours</item>
+        <item>@drawable/blogs</item>
+        <item>@drawable/contact_us</item>
+        <item>@drawable/about_us</item>
+        <item>@drawable/about_us</item>
+        <item>@drawable/about_us</item>
+        <item>@drawable/about_us</item>
+        <item>@drawable/login_register</item>
+    </array>
+
+</resources>

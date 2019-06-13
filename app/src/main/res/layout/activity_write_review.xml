@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bgg">
+
+    <include layout="@layout/toolbar"/>
+
+    <TextView
+        android:id="@+id/tvWriteReview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/red"
+        android:text="Write Review"
+        android:padding="2dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:id="@+id/relMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/tvWriteReview"
+        android:background="@drawable/diagonalbox">
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/admin"
+            android:textColor="@color/white"
+            android:inputType="text"
+            android:hint="Name"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/white"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etName"
+            android:layout_marginTop="5dp"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/email_white"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:hint="Email ID"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/white"/>
+
+        <EditText
+            android:id="@+id/etReview"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/etEmail"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/diagonal"
+            android:hint="Your Review"
+            android:textColorHint="@color/white"
+            android:gravity="start"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etReview"
+            android:text="Please Note: Once review added cannot be deleted or updated."
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_below="@+id/tvNote"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/button"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="Submit"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="7dp"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/realll"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY" />
+
+            <com.like.LikeButton
+                app:icon_type="heart"
+                app:icon_size="25dp"
+                android:id="@+id/star_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignTop="@+id/iv1"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/realll"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/location_black"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <LinearLayout
+            android:id="@+id/linear33"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv2">
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:numStars="5"
+                android:clickable="true"
+                android:stepSize="1"
+                android:progressTint="@color/yellow"/>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/scrollv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="2dp"
+            android:scrollbarStyle="insideInset"
+            android:layout_below="@+id/linear33">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/scrollImage"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/car_red"/>
+
+                <TextView
+                    android:id="@+id/scrollTview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="15dp"
+                    android:layout_below="@+id/scrollImage"
+                    android:text="₹ 7000"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/scrollImage1"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/scrollImage"
+                    android:src="@mipmap/bus_red"/>
+
+                <TextView
+                    android:id="@+id/scrollTview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="18dp"
+                    android:layout_below="@+id/scrollImage1"
+                    android:layout_toRightOf="@+id/scrollImage"
+                    android:text="₹ 6000"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/scrollImage2"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/scrollImage1"
+                    android:src="@mipmap/minibus_red"/>
+
+                <TextView
+                    android:id="@+id/scrollTview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="18dp"
+                    android:layout_below="@+id/scrollImage2"
+                    android:layout_toRightOf="@+id/scrollImage1"
+                    android:text="₹ 8000"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/scrollImage3"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/scrollImage2"
+                    android:src="@mipmap/suv_red"/>
+
+                <TextView
+                    android:id="@+id/scrollTview3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="18dp"
+                    android:layout_below="@+id/scrollImage3"
+                    android:layout_toRightOf="@+id/scrollImage2"
+                    android:text="₹ 5500"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/scrollImage4"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/scrollImage3"
+                    android:src="@mipmap/sedan_red"/>
+
+                <TextView
+                    android:id="@+id/scrollTview4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="18dp"
+                    android:layout_below="@+id/scrollImage4"
+                    android:layout_toRightOf="@+id/scrollImage3"
+                    android:text="₹ 1200"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/scrollImage5"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/scrollImage4"
+                    android:src="@mipmap/compact_car_red"/>
+
+                <TextView
+                    android:id="@+id/scrollTview5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="18dp"
+                    android:layout_below="@+id/scrollImage5"
+                    android:layout_toRightOf="@+id/scrollImage4"
+                    android:text="₹ 600"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/scrollImage6"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/scrollImage5"
+                    android:src="@mipmap/luxury_car_red"/>
+
+                <TextView
+                    android:id="@+id/scrollTview6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="18dp"
+                    android:layout_below="@+id/scrollImage6"
+                    android:layout_toRightOf="@+id/scrollImage5"
+                    android:text="₹ 9000"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/scrollImage7"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/scrollImage6"
+                    android:src="@mipmap/sedan_red"/>
+
+                <TextView
+                    android:id="@+id/scrollTview7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="18dp"
+                    android:layout_below="@+id/scrollImage7"
+                    android:layout_toRightOf="@+id/scrollImage6"
+                    android:text="₹ 1200"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/relative111"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:layout_below="@+id/scrollv">
+
+            <TextView
+                android:id="@+id/textv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tour Type :"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/textv"
+                android:text="Adventure"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/linear22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/textv1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Days :"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="6"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="Nights :"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="5"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear22"
+                android:layout_marginTop="5dp"
+                android:text="Speciality :"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textv9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear22"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/textv8"
+                android:text="Travel Insurance"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative111"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:text="Plan with friends "
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:text="Book"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

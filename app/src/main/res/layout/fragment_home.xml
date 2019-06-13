@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bgg"
+    tools:context=".Home">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="@string/plan"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPlan"
+                android:layout_marginTop="22dp"
+                android:gravity="center_horizontal"
+                android:text="@string/experience"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/llButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvExperience"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btnPack"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/package_tours_30x30"
+                    android:text="@string/packagetour"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnVehicle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/diagonal"
+                    android:drawableLeft="@drawable/vehicle_rentals_30x30"
+                    android:text="@string/vehicle"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFinal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/llButton"
+                android:orientation="vertical">
+                ///Package
+
+                <LinearLayout
+                    android:id="@+id/llPackage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/llButton"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:id="@+id/rlPackage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llButton"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/diagonalbox">
+
+                        <TextView
+                            android:id="@+id/etLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="7dp"
+                            android:background="#fff"
+                            android:drawableLeft="@drawable/location_black"
+                            android:hint="@string/lhint"
+                            android:padding="4dp"
+                            android:textColorHint="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/etDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:layout_below="@+id/etLocation"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="7dp"
+                            android:adjustViewBounds="true"
+                            android:background="#fff"
+                            android:drawableLeft="@drawable/rsz_calendar3x"
+                            android:hint=" Select Depature Date"
+                            android:padding="4dp"
+                            android:textColorHint="@color/black"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/llGuest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/etDate"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="7dp"
+                            android:weightSum="2">
+
+                            <EditText
+                                android:id="@+id/et3"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/et2"
+                                android:layout_weight="1"
+                                android:background="#fff"
+                                android:drawableLeft="@drawable/rsz_guest3x"
+                                android:hint=" GUEST: 2"
+                                android:visibility="gone"
+                                android:padding="4dp"
+                                android:textColorHint="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/etType"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/et2"
+                                android:layout_weight="1"
+                                android:background="#fff"
+                                android:drawableLeft="@drawable/rsz_tour_type3x"
+                                android:hint=" Select Your Type"
+                                android:padding="4dp"
+                                android:gravity="center_vertical"
+                                android:textColorHint="@color/black"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnSearchP"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/llGuest"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@color/red"
+                            android:text="SEARCH"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl2"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:text="Top Tour Packages"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/tvTop"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/red" />
+
+                    <TextView
+                        android:id="@+id/tvGo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvTop"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center_horizontal"
+                        android:text="Go, fly, roam, travel, voyage, explore, journey,\ndiscover, adventure"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+                ///Vehicle
+
+                <LinearLayout
+                    android:id="@+id/llVehicle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/llButton"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rlVehicle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llButton"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/diagonalbox">
+
+                        <TextView
+                            android:id="@+id/etPickLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="7dp"
+                            android:background="#fff"
+                            android:drawableLeft="@drawable/location_black"
+                            android:hint="Pick Up Location"
+                            android:padding="4dp"
+                            android:textColorHint="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/etDropLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:layout_below="@+id/etPickLocation"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="7dp"
+                            android:background="#fff"
+                            android:drawableLeft="@drawable/location_black"
+                            android:hint="Drop Off Location"
+                            android:padding="4dp"
+                            android:textColorHint="@color/black"
+                            android:textSize="15sp" />
+
+
+                        <LinearLayout
+                            android:id="@+id/llPickup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/etDropLocation"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="7dp"
+                            android:weightSum="2">
+
+                            <EditText
+                                android:id="@+id/et7"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/etDropLocation"
+                                android:layout_weight="1"
+                                android:background="#fff"
+                                android:drawableLeft="@drawable/rsz_calendar3x"
+                                android:hint=" Pick Up Date"
+                                android:padding="4dp"
+                                android:textColorHint="@color/black"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/et8"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/etDropLocation"
+                                android:layout_weight="1"
+                                android:background="#fff"
+                                android:drawableLeft="@drawable/rsz_time3x"
+                                android:hint=" Time"
+                                android:padding="4dp"
+                                android:textColorHint="@color/black"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPickup2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llPickup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="7dp"
+                            android:weightSum="2">
+
+                            <EditText
+                                android:id="@+id/et333"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/et2"
+                                android:layout_weight="1"
+                                android:background="#fff"
+                                android:drawableLeft="@drawable/rsz_calendar3x"
+                                android:hint=" Drop Off Date"
+                                android:padding="4dp"
+                                android:textColorHint="@color/black"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/et444"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/et2"
+                                android:layout_weight="1"
+                                android:background="#fff"
+                                android:drawableLeft="@drawable/rsz_time3x"
+                                android:hint=" Time"
+                                android:padding="4dp"
+                                android:textColorHint="@color/black"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnSearchV"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/llPickup2"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@color/red"
+                            android:text="SEARCH"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvFeatured"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlVehicle"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:text="Featured Rental Vehicles"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/tvFeatured"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/red" />
+
+                    <TextView
+                        android:id="@+id/tvSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvFeatured"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center_horizontal"
+                        android:text="Select from wide range of vehicles based on\nyour need and choice. We serve your travel need!"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llPackage"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_noData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No Details Available"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/login_bg"
+    android:id="@+id/relative1">
+
+    <ImageView
+        android:id="@+id/iv_BackpressOtp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:src="@mipmap/back_white"/>
+    <TextView
+        android:id="@+id/tview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP Verification"
+        android:layout_below="@+id/iview1"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true" />
+    <View
+        android:id="@+id/view1"
+        android:layout_width="145dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/tview1"
+        android:background="@android:color/white" />
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="17dp"
+        android:text="To continue, Please enter OTP sent to verify your mobile number: +91 1111111111"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_below="@+id/view1"/>
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/tv_msg"
+        android:background="@drawable/diagonalbox">
+
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/et2"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="Enter OTP"
+            android:background="@null"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:textColorHint="@color/white"/>
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/et1"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_below="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/buttondiagonalbox"
+            android:layout_centerInParent="true"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="Confirm"/>
+        <TextView
+            android:id="@+id/tview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/button1"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="Resend OTP"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

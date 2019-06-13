@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:id="@+id/card_view">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rlCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/ivPicc"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/blogs1"
+                android:layout_centerVertical="true" />
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/ivPicc"/>
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv1"
+                android:layout_marginBottom="10dp"
+                android:drawableLeft="@drawable/location_black"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_toRightOf="@+id/ivPicc"/>
+            
+            <RelativeLayout
+                android:id="@+id/rlGuest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivPicc"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/tv2">
+
+                <ImageView
+                    android:id="@+id/ivGuest"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/rsz_user_black"/>
+
+                <TextView
+                    android:id="@+id/tvG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ivGuest"
+                    android:text="Guest :"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tvGuest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvG"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlGear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv2">
+
+                <ImageView
+                    android:id="@+id/ivGear"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/rsz_user_black"/>
+
+                <TextView
+                    android:id="@+id/tvGr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ivGear"
+                    android:text="Gear :"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tvGear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvGr"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/black"
+                    android:paddingLeft="5dp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlDoors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivPicc"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/rlGuest">
+
+                <ImageView
+                    android:id="@+id/ivDoors"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/rsz_user_black"/>
+
+                <TextView
+                    android:id="@+id/tvDs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ivDoors"
+                    android:text="Doors :"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tvDoors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvDs"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlBaggage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rlGear"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/ivBaggage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/rsz_user_black"/>
+
+                <TextView
+                    android:id="@+id/tvBge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ivBaggage"
+                    android:text="Baggage :"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tvBaggage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvBge"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/black"
+                    android:paddingLeft="5dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rlCard"
+            android:background="#1e000000"
+            android:layout_marginLeft="15dp"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    card_view:cardUseCompatPadding="true"
+    android:layout_margin="7dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground">
+
+        <TextView
+            android:id="@+id/tvGuest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Guest 1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tvGuest"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/red"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/location_black"
+            android:gravity="center_vertical"
+            android:hint="Name"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etPassport"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/etName"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/red"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/location_black"
+            android:gravity="center_vertical"
+            android:hint="Passport Number"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/etPassport"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/red"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/location_black"
+            android:gravity="center_vertical"
+            android:hint="Age"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/minibus_red"
+        android:state_selected="true"/>
+    <item android:drawable="@mipmap/minibus_gray"/> <!-- default -->
+</selector>
+
